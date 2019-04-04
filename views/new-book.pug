@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+  h1= title
+
+  include error
+
+  form(action=`/books/new`, method="post")
+    p
+      label(for="title") Title:
+      input(name="title", type="text", id="title")
+    p
+      label(for="author") Author:
+      input(name="author", type="text", id="author")
+    p
+      label(for="body") Genre:
+      input(name="genre", type="text", id="genre")
+    p
+      label(for="body") Year:
+      input(name="year", type="text", id="year")
+    p
+      input(type="submit")
